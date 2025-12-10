@@ -227,7 +227,7 @@ img{
     background: var(--dark-color);
     color: white;
 }
-.menu-list{
+.menu-section .menu-list{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -235,7 +235,7 @@ img{
     justify-content: space-between;
 }
 .menu-image{
-    max-width: 80%;
+    max-width: 83%;
     aspect-ratio: 1;
 }
 .menu-item{
@@ -245,8 +245,21 @@ img{
     width: calc(100% / 3 - 110px);
     text-align: center;
 }
-.menu-details .text{
-    
+.menu-section .menu-list .menu-item .name{
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+}
+.menu-section .menu-list .menu-item .text{
+    margin-top: -2px;
+}
+@media screen and (max-width: 1024px) {
+    .menu-list{
+        gap: 60px;
+    }
+    .menu-item{
+        width: calc(100% /3- 60px);
+    }
 }
 
 @media screen and (max-width: 900px) {
