@@ -33,6 +33,9 @@
     --site-max-width:1300px;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 header{
     background: var(--primary-color);
     position: fixed;
@@ -272,8 +275,9 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
+    padding: 34px;
     text-align: center;
+    user-select: none;
 }
 .user-image{
     width: 180px;
@@ -383,6 +387,36 @@ img{
 .submit-button:hover{
     background: var(--secondary-color);
 }
+
+/*footer section*/
+.footer-section{
+    background: var(--dark-color);
+    padding: 20px 0;
+}
+.footer-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-section :where(.copyright-text, .social-link, .policy-link){
+    color: var(--white-color);
+    transition: 0.3s ease;
+}
+.footer-section .social-link-list{
+    display: flex;
+    gap: 25px;
+}
+.footer-section .social-link-list .social-link{
+    font-size: var(--font-size-l);
+}
+.footer-section .social-link-list .social-link:hover,
+.footer-section .policy-text .policy-link:hover{
+     color: var(--secondary-color);
+}
+.footer-section .policy-text .seperator{
+    color: var(--white-color);
+    margin: 0 5px;
+}
 @media screen and (max-width: 1024px) {
     .menu-list{
         gap: 60px;
@@ -466,7 +500,7 @@ img{
         color: white;
     }
     .about-section .section-content{
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 70px;
     }
     .about-image{
@@ -509,5 +543,10 @@ img{
     }
     .testimonial-section .slider-wrapper{
         margin: 0 0 30px;
+    }
+    .footer-section .section-content{
+        flex-direction: column;
+        gap: 20px;
+
     }
 }
