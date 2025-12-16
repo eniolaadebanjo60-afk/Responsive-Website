@@ -238,8 +238,11 @@ img{
 .menu-image{
     max-width: 83%;
     aspect-ratio: 1;
+    transition: 0.3s ease;
 }
-
+.menu-image:hover {
+  transform: translateY(-20px);
+}
 .menu-item{
     display: flex;
     align-items: center;
@@ -251,15 +254,6 @@ img{
     margin: 12px 0;
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-semibold);
-}
-.menu-section .menu-list .menu-item .name::after{
-    content: "";
-    width: 80px;
-    height: 5px;
-    display: block;
-    background: var(--secondary-color);
-    margin: 10px auto 0;
-    border-radius: var(--border-radius-s);
 }
 .menu-section .menu-list .menu-item .text{
     margin-top: -2px;
