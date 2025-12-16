@@ -10,6 +10,7 @@ menuCloseButton.addEventListener("click", () => menuOpenButton.click
 
 const swiper = new Swiper('.slider-wrapper',{
     loop: true,
+    grabCursor: true,
     spaceBetween: 25,
 
     pagination: {
@@ -35,3 +36,8 @@ const swiper = new Swiper('.slider-wrapper',{
         },
     }
 });
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Successfully Submitted!');
+  });
